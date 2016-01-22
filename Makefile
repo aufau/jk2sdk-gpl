@@ -59,7 +59,6 @@ obj_ui		:= $(srcs_ui:%=out/mod/%.o)
 
 # Targets
 
-.PHONY	: vm game cgame ui shared gameshared cgameshared uishared tools
 all	: vm shared
 vm	: game cgame ui
 shared	: gameshared cgameshared uishared
@@ -85,6 +84,7 @@ help	:
 	@echo '  toolsclean	- Remove q3asm and q3lcc'
 	@echo '  depclean	- Remove generated dependency files'
 	@echo '  distclean	- Remove all generated files'
+.PHONY	: vm game cgame ui shared gameshared cgameshared uishared tools
 
 # QVM Targets
 
