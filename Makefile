@@ -127,8 +127,10 @@ base/ui_$(ARCH).so : $(obj_ui) | base/
 
 # Pattern rules
 
+.PRECIOUS : %/
+
 %/ :
-	$(echo_cmd) "MKDIR $<"
+	$(echo_cmd) "MKDIR $@"
 	$(Q)mkdir -p $@
 
 define dep_template =
