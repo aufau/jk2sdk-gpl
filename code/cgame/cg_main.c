@@ -1631,8 +1631,6 @@ void CG_RegisterFont(fontHandle_t face[MAX_FONT_VARIANTS], const char *fontName)
 	face[0].size = trap_R_Font_HeightPixels(index, 1.0f);
 
 	for (i = 1, j = 1; i < MAX_FONT_VARIANTS; i++) {
-		int size;
-
 		Com_sprintf(fileName, sizeof(fileName), "%s%d", fontName, i);
 
 		if (trap_FS_FOpenFile(va("fonts/%s.fontdat", fileName), &f, FS_READ) < 0) {
